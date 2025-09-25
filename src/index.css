@@ -1,0 +1,179 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 全局样式重置 */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #262626;
+  background-color: #f0f2f5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* 自定义滚动条样式 */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+/* Ant Design 组件样式覆盖 */
+.ant-layout {
+  background: #f0f2f5 !important;
+}
+
+.ant-layout-sider {
+  box-shadow: 2px 0 6px rgba(0, 21, 41, 0.35) !important;
+}
+
+.ant-menu-light {
+  background: #fff !important;
+}
+
+.ant-menu-light .ant-menu-item-selected {
+  background-color: #e6f7ff !important;
+  color: #1890ff !important;
+}
+
+.ant-menu-light .ant-menu-item:hover {
+  color: #1890ff !important;
+}
+
+.ant-menu-light .ant-menu-submenu-title:hover {
+  color: #1890ff !important;
+}
+
+/* 表格样式优化 */
+.ant-table-thead > tr > th {
+  background: #fafafa !important;
+  font-weight: 600 !important;
+}
+
+.ant-table-tbody > tr:hover > td {
+  background: #f5f5f5 !important;
+}
+
+/* 卡片样式优化 */
+.ant-card {
+  border-radius: 8px !important;
+  box-shadow: 0 1px 4px rgba(0, 21, 41, 0.08) !important;
+}
+
+.ant-card-head {
+  border-bottom: 1px solid #f0f0f0 !important;
+}
+
+/* 按钮样式优化 */
+.ant-btn {
+  border-radius: 6px !important;
+}
+
+.ant-btn-primary {
+  background: #1890ff !important;
+  border-color: #1890ff !important;
+}
+
+.ant-btn-primary:hover {
+  background: #40a9ff !important;
+  border-color: #40a9ff !important;
+}
+
+/* 输入框样式优化 */
+.ant-input, .ant-input-password {
+  border-radius: 6px !important;
+}
+
+.ant-input:focus, .ant-input-password:focus {
+  border-color: #40a9ff !important;
+  box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2) !important;
+}
+
+/* 选择器样式优化 */
+.ant-select .ant-select-selector {
+  border-radius: 6px !important;
+}
+
+/* 模态框样式优化 */
+.ant-modal {
+  border-radius: 8px !important;
+}
+
+.ant-modal-header {
+  border-radius: 8px 8px 0 0 !important;
+}
+
+/* 面包屑样式 */
+.ant-breadcrumb {
+  padding: 16px 0 !important;
+}
+
+/* 统计数字样式 */
+.ant-statistic-content {
+  font-size: 24px !important;
+  font-weight: bold !important;
+}
+
+.ant-statistic-title {
+  font-size: 14px !important;
+  color: #8c8c8c !important;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .ant-layout-sider {
+    position: fixed !important;
+    z-index: 999 !important;
+    height: 100vh !important;
+  }
+  
+  .ant-layout-content {
+    margin-left: 0 !important;
+  }
+  
+  .ant-table {
+    font-size: 12px !important;
+  }
+  
+  .ant-card {
+    margin-bottom: 8px !important;
+  }
+}
+
+/* 打印样式 */
+@media print {
+  .ant-layout-sider,
+  .ant-layout-header {
+    display: none !important;
+  }
+  
+  .ant-layout-content {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+}
